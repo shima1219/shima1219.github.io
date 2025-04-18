@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加地研究室 - バイオ分析化学研究室</title>
+    <style>
+        /* 基本スタイル */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* ヘッダー */
+        .header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('images/header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* ナビゲーション */
+        nav {
+            background-color: #7f1146;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* セクション共通 */
+        .section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #7f1146;
+        }
+
+        /* 研究概要 */
+        .research-summary {
+            background-color: #f8f9fa;
+            padding: 5rem 2rem;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .research-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .research-item img {
+            width: 100%;
+            max-width: 200px;
+            margin-bottom: 1rem;
+        }
+
+        /* ニュース */
+        .news-section {
+            background-color: white;
+        }
+
+        .news-list {
+            list-style: none;
+        }
+
+        .news-item {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .news-date {
+            color: #7f1146;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        /* フッター */
+        footer {
+            background-color: #7f1146;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        /* レスポンシブデザイン */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">ホーム</a></li>
+            <li><a href="research.html">研究内容</a></li>
+            <li><a href="members.html">メンバー</a></li>
+            <li><a href="publications.html">研究業績</a></li>
+            <li><a href="gallery.html">ギャラリー</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+            <li><a href="index_en.html">English</a></li>
+        </ul>
+    </nav>
+
+    <header class="header" id="home">
+        <h1>加地研究室</h1>
+        <p>バイオ分析化学研究室</p>
+        <p>マイクロ・ナノ空間を利用した新規バイオ分析技術の創成</p>
+    </header>
+
+    <section class="section research-summary">
+        <div class="container">
+            <h2 class="section-title">研究概要</h2>
+            <div class="research-grid">
+                <div class="research-item">
+                    <img src="images/research1.jpg" alt="マイクロ流体デバイス">
+                    <h3>マイクロ流体デバイス</h3>
+                    <p>半導体微細加工技術を用いたマイクロ・ナノ空間デバイスの開発</p>
+                </div>
+                <div class="research-item">
+                    <img src="images/research2.jpg" alt="バイオセンシング">
+                    <h3>バイオセンシング</h3>
+                    <p>生体分子の高感度検出システムの開発</p>
+                </div>
+                <div class="research-item">
+                    <img src="images/research3.jpg" alt="医療診断">
+                    <h3>医療診断</h3>
+                    <p>がんなどの疾病マーカーの迅速検出技術の開発</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section news-section">
+        <div class="container">
+            <h2 class="section-title">最新ニュース</h2>
+            <ul class="news-list">
+                <li class="news-item">
+                    <span class="news-date">2024.04.01</span>
+                    <span class="news-content">新入生歓迎会を開催しました</span>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">2024.03.15</span>
+                    <span class="news-content">修士論文発表会が行われました</span>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">2024.03.01</span>
+                    <span class="news-content">国際学会での研究発表が採択されました</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>〒000-0000 ○○県○○市○○町1-1</p>
+            <p>○○大学 工学部 加地研究室</p>
+            <p>Tel: 000-000-0000 | Email: contact@kaji-lab.example.com</p>
+            <p>&copy; 2024 加地研究室 All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
